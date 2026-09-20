@@ -9,7 +9,7 @@
 | Evaluator model                    | BAAI/bge-small-en-v1.5 (local, embedding-based) — LLM evaluator blocked: no API key |
 | Generator model                    | Blocked: no `OPENAI_API_KEY`/`GEMINI_API_KEY`/`ANTHROPIC_API_KEY` set |
 | Embedding model                    | BAAI/bge-small-en-v1.5 (384-dim) — `BAAI/bge-m3` is the intended 1024-dim default but its 2.3 GB download is impractical in this environment |
-| Corpus version/commit              | 12 documents (6 legal PDF + 6 news pages), 384 chunks |
+| Corpus version/commit              | 12 documents (6 legal PDF + 6 news pages), 384 chunks; commit 523482e |
 | Golden dataset size                | 20 |
 | `top_k`                            | 5 |
 | Fallback threshold and calibration | 0.60 — calibrated: in-domain best dense sim min=0.7805; out-of-domain max=0.5416 |
