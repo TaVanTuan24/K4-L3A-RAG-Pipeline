@@ -1,0 +1,277 @@
+{
+  "top_k": 5,
+  "cases": [
+    {
+      "question": "What is the purpose of the Support for Students Policy?",
+      "config_a_dense": {
+        "context_recall": 0.9615643516083233,
+        "context_precision": 1.0,
+        "best_similarity": 0.9538279996283491
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.9615643516083233,
+        "context_precision": 1.0,
+        "best_similarity": 0.9538279996283491
+      }
+    },
+    {
+      "question": "Which legislation does the Support for Students Policy align with?",
+      "config_a_dense": {
+        "context_recall": 0.9615643516083233,
+        "context_precision": 1.0,
+        "best_similarity": 0.9538279996283491
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.9615643516083233,
+        "context_precision": 1.0,
+        "best_similarity": 0.9538279996283491
+      }
+    },
+    {
+      "question": "Who does the Support for Students Policy apply to?",
+      "config_a_dense": {
+        "context_recall": 0.7951157721452005,
+        "context_precision": 1.0,
+        "best_similarity": 0.7676143988887449
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.7951157721452005,
+        "context_precision": 1.0,
+        "best_similarity": 0.7676143988887449
+      }
+    },
+    {
+      "question": "What is the purpose of the Admissions Policy?",
+      "config_a_dense": {
+        "context_recall": 0.8730178328864684,
+        "context_precision": 1.0,
+        "best_similarity": 0.8650187337013271
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.8730178328864684,
+        "context_precision": 1.0,
+        "best_similarity": 0.8650187337013271
+      }
+    },
+    {
+      "question": "Is Victoria University a dual-sector institution, and what does that mean?",
+      "config_a_dense": {
+        "context_recall": 0.8698481832157,
+        "context_precision": 1.0,
+        "best_similarity": 0.9463773328075202
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.8698481832157,
+        "context_precision": 1.0,
+        "best_similarity": 0.9463773328075202
+      }
+    },
+    {
+      "question": "What study types does the Admissions Policy cover?",
+      "config_a_dense": {
+        "context_recall": 0.7858756876540112,
+        "context_precision": 1.0,
+        "best_similarity": 0.7840555661777221
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.7877906304556851,
+        "context_precision": 1.0,
+        "best_similarity": 0.7861382871836667
+      }
+    },
+    {
+      "question": "What is the purpose of the Enrolments Policy?",
+      "config_a_dense": {
+        "context_recall": 0.8390136120212395,
+        "context_precision": 1.0,
+        "best_similarity": 0.8247062907196554
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.8390136120212395,
+        "context_precision": 1.0,
+        "best_similarity": 0.8247062907196554
+      }
+    },
+    {
+      "question": "What does the Fee Adjustments Procedure cover?",
+      "config_a_dense": {
+        "context_recall": 0.9010072276981118,
+        "context_precision": 1.0,
+        "best_similarity": 0.898287166867253
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.9010072276981118,
+        "context_precision": 1.0,
+        "best_similarity": 0.898287166867253
+      }
+    },
+    {
+      "question": "Which fees can be adjusted under the Fee Adjustments Procedure?",
+      "config_a_dense": {
+        "context_recall": 0.9524820112816266,
+        "context_precision": 1.0,
+        "best_similarity": 0.9540700899853417
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.9524820112816266,
+        "context_precision": 1.0,
+        "best_similarity": 0.9540700899853417
+      }
+    },
+    {
+      "question": "What does the Student Conduct Policy outline?",
+      "config_a_dense": {
+        "context_recall": 0.901401831957622,
+        "context_precision": 1.0,
+        "best_similarity": 0.8845194256634982
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.901401831957622,
+        "context_precision": 1.0,
+        "best_similarity": 0.8845194256634982
+      }
+    },
+    {
+      "question": "What happens if a student breaches the Student Conduct Policy?",
+      "config_a_dense": {
+        "context_recall": 0.899174964758422,
+        "context_precision": 1.0,
+        "best_similarity": 0.873750138727999
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.899174964758422,
+        "context_precision": 1.0,
+        "best_similarity": 0.873750138727999
+      }
+    },
+    {
+      "question": "What is the purpose of the Academic Integrity Policy?",
+      "config_a_dense": {
+        "context_recall": 0.9330280873908605,
+        "context_precision": 1.0,
+        "best_similarity": 0.9519798372478747
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.9330280873908605,
+        "context_precision": 1.0,
+        "best_similarity": 0.9519798372478747
+      }
+    },
+    {
+      "question": "How many students have been helped by scholarships in the last 2 years at VU?",
+      "config_a_dense": {
+        "context_recall": 0.7476293557090098,
+        "context_precision": 1.0,
+        "best_similarity": 0.8926748796400283
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.7426164553153588,
+        "context_precision": 1.0,
+        "best_similarity": 0.8926748796400283
+      }
+    },
+    {
+      "question": "How much scholarship money is paid per semester at VU?",
+      "config_a_dense": {
+        "context_recall": 0.7426164553153588,
+        "context_precision": 1.0,
+        "best_similarity": 0.8926748796400283
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.7426164553153588,
+        "context_precision": 1.0,
+        "best_similarity": 0.8926748796400283
+      }
+    },
+    {
+      "question": "What is the value of VU Early Entry scholarships and who are they for?",
+      "config_a_dense": {
+        "context_recall": 0.8868770974171272,
+        "context_precision": 1.0,
+        "best_similarity": 0.957723061058815
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.8868771234392259,
+        "context_precision": 1.0,
+        "best_similarity": 0.9577231155879857
+      }
+    },
+    {
+      "question": "What is the VUSU Pantry and where is it located?",
+      "config_a_dense": {
+        "context_recall": 0.9120088108512996,
+        "context_precision": 1.0,
+        "best_similarity": 0.9152845619884785
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.9120088108512996,
+        "context_precision": 1.0,
+        "best_similarity": 0.9152845619884785
+      }
+    },
+    {
+      "question": "Who has Victoria University partnered with to provide free frozen meals to students?",
+      "config_a_dense": {
+        "context_recall": 0.7875444525131857,
+        "context_precision": 1.0,
+        "best_similarity": 0.7549351229210282
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.7875444525131857,
+        "context_precision": 1.0,
+        "best_similarity": 0.7549351229210282
+      }
+    },
+    {
+      "question": "How many libraries does Victoria University have and where?",
+      "config_a_dense": {
+        "context_recall": 0.9298733577504459,
+        "context_precision": 1.0,
+        "best_similarity": 0.9226722007257968
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.9298733577504459,
+        "context_precision": 1.0,
+        "best_similarity": 0.9226722007257968
+      }
+    },
+    {
+      "question": "When do library services finish relative to closing time?",
+      "config_a_dense": {
+        "context_recall": 0.7563817052611623,
+        "context_precision": 1.0,
+        "best_similarity": 0.7314591369236709
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.7563817052611623,
+        "context_precision": 0.8,
+        "best_similarity": 0.7314591369236709
+      }
+    },
+    {
+      "question": "What phone number can students call for support?",
+      "config_a_dense": {
+        "context_recall": 0.7493030032849819,
+        "context_precision": 1.0,
+        "best_similarity": 0.8815468858677918
+      },
+      "config_b_hybrid": {
+        "context_recall": 0.7225143298849028,
+        "context_precision": 1.0,
+        "best_similarity": 0.8815469488061627
+      }
+    }
+  ],
+  "aggregate": {
+    "config_a_dense": {
+      "context_recall": 0.8592664076164243,
+      "context_precision": 1.0,
+      "best_similarity": 0.8803502854404636
+    },
+    "config_b_hybrid": {
+      "context_recall": 0.857772077367926,
+      "context_precision": 0.99,
+      "best_similarity": 0.8804544273641379
+    }
+  }
+}

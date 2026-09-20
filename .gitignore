@@ -38,6 +38,12 @@ htmlcov/
 # Temp PDF conversion cache
 data/_tmp_pdf/
 
+# Chroma vector store (rebuildable from standardized markdown)
+chroma_db/
+
+# Locally downloaded embedding/reranker models (rebuildable)
+models/
+
 # Temp / cache
 .pytest_cache/
 *.tmp

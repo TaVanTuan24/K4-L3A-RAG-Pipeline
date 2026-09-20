@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What is the purpose of the Support for Students Policy?",
+    "expected_answer": "It provides the overall settings and framework at Victoria University to support students to succeed in their studies.",
+    "expected_context": "This Policy provides the overall settings and framework at Victoria University to support students to succeed in their studies in accordance with the Higher Education Support Act 2003 (Cth) and the Higher Education Provider Amendment (Support for Students Policy) Guidelines 2023."
+  },
+  {
+    "question": "Which legislation does the Support for Students Policy align with?",
+    "expected_answer": "The Higher Education Support Act 2003 (Cth) and the Higher Education Provider Amendment (Support for Students Policy) Guidelines 2023.",
+    "expected_context": "This Policy provides the overall settings and framework at Victoria University to support students to succeed in their studies in accordance with the Higher Education Support Act 2003 (Cth) and the Higher Education Provider Amendment (Support for Students Policy) Guidelines 2023."
+  },
+  {
+    "question": "Who does the Support for Students Policy apply to?",
+    "expected_answer": "All academic and non-academic support services provided to students, including Higher Degree by Research candidates, in award and non-award courses.",
+    "expected_context": "This Policy applies to all academic and non-academic support services provided to students (including Higher Degree by Research candidates) in award and non-award courses at Victoria University."
+  },
+  {
+    "question": "What is the purpose of the Admissions Policy?",
+    "expected_answer": "It outlines the principles guiding Victoria University in the admission and selection of students to all courses, ensuring processes are transparent and decisions are consistent and fair.",
+    "expected_context": "This Policy outlines the principles that guide Victoria University (VU) in the admission and selection of students to all courses, ensuring processes are transparent and decisions are consistent and fair."
+  },
+  {
+    "question": "Is Victoria University a dual-sector institution, and what does that mean?",
+    "expected_answer": "Yes; VU is a dual-sector institution comprising Victoria University Higher Education and TAFE.",
+    "expected_context": "Throughout this Policy, VU refers to Victoria University Higher Education and TAFE. VU is a dual-sector institution."
+  },
+  {
+    "question": "What study types does the Admissions Policy cover?",
+    "expected_answer": "HE and VET coursework (domestic and international, onshore and offshore), postgraduate research, apprenticeships and trade-based study, and non-award units or courses of study including industry-based courses.",
+    "expected_context": "This Policy applies to the Admission and selection of applicants to the following awards: Award coursework study in higher education (HE) and vocational education (VET) including domestic and international, onshore and offshore; Postgraduate research; Apprenticeships and trade-based study; and Non-award units or courses of study including industry-based courses."
+  },
+  {
+    "question": "What is the purpose of the Enrolments Policy?",
+    "expected_answer": "It ensures Victoria University's enrolment practices are fair and consistent, comply with Government and external body requirements and legislation, and support delivery of an excellent student experience.",
+    "expected_context": "This Policy ensures that Victoria University's (VU's) enrolment practices are fair and consistent, comply with all relevant Government and external body requirements and legislation, and support the delivery of an excellent student experience."
+  },
+  {
+    "question": "What does the Fee Adjustments Procedure cover?",
+    "expected_answer": "It details refunding, waiving, application of concession, or payment time extensions on fees under specific circumstances, as identified in the Fees and Charges Regulations 2013.",
+    "expected_context": "This Procedure details processes involved in the refunding, waiving, application of concession or payment time extensions on all or part of any fees and charges of students under specific circumstances, as identified in the Fees and Charges Regulations 2013."
+  },
+  {
+    "question": "Which fees can be adjusted under the Fee Adjustments Procedure?",
+    "expected_answer": "Onshore fees paid upfront, ancillary and material fees, Student Services and Amenities Fees (SSAF), and any other fees fixed under the Fees and Charges Regulations 2013.",
+    "expected_context": "This Procedure applies to the refunding, waiving, application of concession or extending of fees and charges that include: Onshore fees paid upfront, Ancillary and material fees, Student Services and Amenities Fees (SSAF), and Any other fees fixed under Fees and Charges Regulations 2013."
+  },
+  {
+    "question": "What does the Student Conduct Policy outline?",
+    "expected_answer": "The expectations for the academic, research, personal and professional conduct of students at Victoria University.",
+    "expected_context": "This Policy outlines the expectations for the academic, research, personal and professional conduct of students at Victoria University (VU)."
+  },
+  {
+    "question": "What happens if a student breaches the Student Conduct Policy?",
+    "expected_answer": "They may be subject to disciplinary action under the University's Student Misconduct Regulations 2019.",
+    "expected_context": "Students who breach the conduct expectations in this Policy may be subject to disciplinary action under the University's Student Misconduct Regulations 2019."
+  },
+  {
+    "question": "What is the purpose of the Academic Integrity Policy?",
+    "expected_answer": "To ensure VU takes a consistent approach to academic integrity, that students and staff present authentic work that is their own, and to provide a basis for detecting and addressing breaches of academic integrity.",
+    "expected_context": "The purpose of this Policy is to ensure that Victoria University (VU) takes a consistent approach to academic integrity; Students and staff are aware of the importance of presenting authentic work that is their own, and acknowledging the work of others; and A basis for detecting and addressing breaches of academic integrity in a range of teaching and assessment environments is provided."
+  },
+  {
+    "question": "How many students have been helped by scholarships in the last 2 years at VU?",
+    "expected_answer": "600+ students have been helped in the last 2 years.",
+    "expected_context": "600+ students helped in last 2 years. $500,000+ in scholarship money paid per semester. Thrive Grant has helped nearly 200 students to date."
+  },
+  {
+    "question": "How much scholarship money is paid per semester at VU?",
+    "expected_answer": "$500,000+ in scholarship money is paid per semester.",
+    "expected_context": "600+ students helped in last 2 years. $500,000+ in scholarship money paid per semester. Thrive Grant has helped nearly 200 students to date."
+  },
+  {
+    "question": "What is the value of VU Early Entry scholarships and who are they for?",
+    "expected_answer": "Up to $5,000 for current VCE students who are VU Early Entry members, paid incrementally throughout their studies.",
+    "expected_context": "VU Early Entry scholarships: Open to current VCE students. We're offering scholarships up to the value of $5,000 for VU Early Entry members, paid incrementally throughout your studies."
+  },
+  {
+    "question": "What is the VUSU Pantry and where is it located?",
+    "expected_answer": "It provides free groceries and essential items; it is at Footscray Park, Building M, opposite VUHQ, on Mondays and Wednesdays 11am-1pm.",
+    "expected_context": "You can access free groceries and essential items through the VUSU Pantry: Footscray Park Building M, opposite VUHQ Mondays and Wednesdays, 11am-1pm."
+  },
+  {
+    "question": "Who has Victoria University partnered with to provide free frozen meals to students?",
+    "expected_answer": "SecondBite.",
+    "expected_context": "We have partnered with SecondBite to provide students with free, healthy frozen meals to eat at home."
+  },
+  {
+    "question": "How many libraries does Victoria University have and where?",
+    "expected_answer": "Seven libraries across its campuses in Melbourne, plus library services in learning hubs at VU Sydney and VU Brisbane.",
+    "expected_context": "Victoria University has seven libraries across its campuses in Melbourne, and provides library services within the learning hubs at VU Sydney and VU Brisbane."
+  },
+  {
+    "question": "When do library services finish relative to closing time?",
+    "expected_answer": "All services finish 15 minutes before the closing time.",
+    "expected_context": "Facilities, services and opening hours may differ between libraries, and all services finish 15 minutes before the closing time."
+  },
+  {
+    "question": "What phone number can students call for support?",
+    "expected_answer": "03 9919 6100.",
+    "expected_context": "Call us: 03 9919 6100. Visit us: Visit VUHQ on campus."
+  }
+]
