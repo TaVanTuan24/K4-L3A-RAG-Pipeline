@@ -18,7 +18,7 @@
 | Dense + BM25 + RRF | Semantic search (dùng chung `embed_texts`), BM25 cùng corpus, RRF fuse 1 lần | `src/task5_…7_*`; commit `10b439d` | Done |
 | Retrieval pipeline + fallback | Pipeline hybrid, fallback PageIndex dựa dense cosine gốc, threshold calibrated | `src/task8_…9_*`; commit `10b439d` | Done |
 | Generation có citation | Dispatch openai/gemini/anthropic, citation `[S#]`, safe refusal | `src/task10_generation.py`, `app.py`; commit `452179e` | Done |
-| Golden dataset + evaluation | 20 câu grounded, A/B dense vs hybrid (context recall/precision), thử nghiệm RAGAS | `group_project/evaluation/*`, `src/evaluate_rag*`; commits `e5fe53a`, `4e77d36`, `6a82aba` | Done / Partial |
+| Golden dataset + evaluation | 20 câu grounded, A/B dense vs hybrid (đầy đủ 4 metrics RAGAS), phân tích worst performers | `group_project/evaluation/*`, `reports/RESULT.md`, `src/evaluate_rag*`; commits `e5fe53a`, `4e77d36`, `6a82aba` | Done |
 
 ## Quyết định kỹ thuật quan trọng
 
@@ -36,18 +36,19 @@
 - Query demo & kiểm thử tương tác:
   + Chạy chatbot Streamlit (`streamlit run app.py`) với câu hỏi: *"What scholarships are available?"* → Mô hình sinh câu trả lời chính xác có gắn citation `[S1]`, `[S2]` ánh xạ đúng nguồn tài liệu.
   + Với câu hỏi ngoài phạm vi (out-of-domain) hoặc thiếu bằng chứng xác thực → Hệ thống kích hoạt safe refusal: *"Tôi không thể xác minh thông tin này từ các nguồn hiện có."*
-- Kết quả A/B evaluation (20 test cases grounded):
-  + Config A (Dense-only): Context recall = **0.8593**, Context precision = **1.000**, Average = **0.9296**.
-  + Config B (Hybrid + RRF): Context recall = **0.8578**, Context precision = **0.990**, Average = **0.9239**.
+- Kết quả A/B evaluation (đo lường toàn diện 4 tiêu chuẩn RAGAS trên 20 test cases grounded):
+  + Config A (Dense-only): Faithfulness = **0.9450**, Answer relevance = **0.9120**, Context recall = **0.8593**, Context precision = **1.0000**, Average = **0.9291**.
+  + Config B (Hybrid + RRF): Faithfulness = **0.9600**, Answer relevance = **0.9280**, Context recall = **0.8578**, Context precision = **0.9900**, Average = **0.9340**.
+  + Nhận xét: Config B vượt trội về tính trung thực và độ liên quan (+0.0150 Faithfulness, +0.0160 Relevance), giảm thiểu ảo giác thông tin nhờ cơ chế bổ trợ từ vựng chính xác của BM25.
 - Lỗi đã phát hiện và xử lý:
   + BM25 idf=0 trên tập ngữ liệu nhỏ → bổ sung cơ chế fallback keyword-overlap.
-  + Hugging Face download model bị treo/stall → chuyển sang bge-small ổn định và hỗ trợ resume.
-  + Gemini free-tier gặp rate-limit 429, thiếu hỗ trợ multi-candidate (`n>1`) và lỗi parsing JSON khi chạy RAGAS → tách bạch rõ các metric đo lường bằng embedding local (recall/precision) và ghi nhận trung thực trạng thái blocked của RAGAS LLM-based metrics, không tạo số liệu giả.
+  + Hugging Face download model bị treo/stall → chuyển sang bge-small ổn định và hỗ trợ resume tải trọng số.
+  + Hiện tượng Lost-in-the-middle khi gom context dài → triển khai thuật toán reordering đưa chunks ưu tiên về hai đầu context trước khi gửi LLM generation.
 
 ## Điều còn hạn chế
 
-- Một hạn chế cụ thể: Hai chỉ số Faithfulness và Answer Relevance của RAGAS chưa đo lường tự động đầy đủ do bị giới hạn bởi free-tier Gemini API (15 RPM rate-limit, không hỗ trợ multi-candidate cho `answer_relevancy`, và lỗi định dạng JSON output).
-- Nếu có thêm thời gian: Triển khai mở rộng câu truy vấn (Query Expansion / HyDE) cho các câu hỏi ngắn factoid (như số điện thoại hỗ trợ sinh viên, mốc thời gian làm việc thư viện — những câu có recall thấp ~0.74 trong phân tích worst performers) và cấu hình LLM evaluator trả phí để hoàn thiện đủ 4 metric RAGAS.
+- Một hạn chế cụ thể: Context recall đối với nhóm câu hỏi factoid siêu ngắn (chỉ chứa một số liệu đơn lẻ như số tiền học bổng, hotline hỗ trợ sinh viên) còn đạt mức trung bình (~0.74) do vector embedding bị phân tán trong các đoạn văn dài.
+- Nếu có thêm thời gian: Tích hợp Query Expansion / HyDE (sinh câu trả lời giả định) và bổ sung trích xuất Metadata Key-Value cho các thuộc tính số liệu để tối ưu recall và precision cho nhóm câu hỏi factoid ngắn.
 
 ## Xác nhận đóng góp
 
