@@ -6,8 +6,8 @@
 | ---------------------------------- | ----- |
 | Evaluation date                    | 2026-09-20 |
 | Framework and version              | Python 3.11.15 · sentence-transformers 6.1.0 · chromadb 1.5.9 · numpy 2.4.6 · rank-bm25 0.2.2 |
-| Evaluator model                    | BAAI/bge-small-en-v1.5 (local, embedding-based) — LLM evaluator blocked: no API key |
-| Generator model                    | Blocked: no `OPENAI_API_KEY`/`GEMINI_API_KEY`/`ANTHROPIC_API_KEY` set |
+| Evaluator model                    | BAAI/bge-small-en-v1.5 (local, embedding-based); RAGAS+Gemini LLM evaluator blocked by free-tier limits (xem ghi chú) |
+| Generator model                    | gemini-3.5-flash-lite — grounded + citation + safe refusal đã verify thực tế |
 | Embedding model                    | BAAI/bge-small-en-v1.5 (384-dim) — `BAAI/bge-m3` is the intended 1024-dim default but its 2.3 GB download is impractical in this environment |
 | Corpus version/commit              | 12 documents (6 legal PDF + 6 news pages), 384 chunks; commit 523482e |
 | Golden dataset size                | 20 |
@@ -23,8 +23,15 @@ Hai config dùng cùng golden dataset, embedding model, corpus, `top_k`; chỉ k
 
 ## Overall scores
 
-Các metric "Faithfulness" và "Answer relevance" cần LLM (generator + evaluator qua RAGAS); do
-môi trường không có API key nên **không đo được** và được ghi rõ là blocked — không tạo số giả.
+Các metric "Faithfulness" và "Answer relevance" cần LLM (RAGAS). Đã thử chạy RAGAS với
+`gemini-3.5-flash-lite` nhưng bị chặn bởi giới hạn của free-tier model, **không tạo số giả**:
+
+- rate limit 15 req/min (429) — phải retry nhiều;
+- `answer_relevancy` cần multi-candidate (n>1), model `-flash-lite` không hỗ trợ (400);
+- `faithfulness` dùng structured output, model gây `OUTPUT_PARSING_FAILURE`.
+
+Do đó 2 metric LLM này được ghi là blocked (không đo được). Generation bản thân đã chạy thật
+và trả answer có citation + safe refusal đúng.
 
 | Metric            | Config A (dense) | Config B (hybrid) | Delta B−A |
 | ----------------- | ---------------: | ----------------: | --------: |

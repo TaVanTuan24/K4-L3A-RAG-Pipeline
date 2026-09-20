@@ -187,12 +187,12 @@ golden dataset gồm 20 câu grounded trong corpus.
 
 ## 12. Limitations
 
-- **Generation cần API key**: `generate_with_citation` trả safe refusal khi chưa
-  đặt `OPENAI_API_KEY` / `GEMINI_API_KEY` / `ANTHROPIC_API_KEY`. Retrieval vẫn chạy
-  đầy đủ (embedding local).
-- **RAGAS metrics cần LLM** (faithfulness, answer relevance) không chạy được khi
-  thiếu key; các retrieval metric (context recall/precision) được đo local bằng
-  embedding `bge-m3`.
+- **Embedding**: `BAAI/bge-m3` (1024-dim) là default theo spec nhưng bản 2.3 GB bị stall khi
+  tải trong môi trường này; đã chạy thật bằng `BAAI/bge-small-en-v1.5` (384-dim, local).
+- **Generation**: hoạt động với `LLM_PROVIDER=gemini` (`gemini-3.5-flash-lite`) — đã verify
+  answer có citation và safe refusal. Nếu thiếu API key thì trả safe refusal (graceful).
+- **RAGAS metrics** (faithfulness, answer relevance) bị chặn bởi free-tier model: rate-limit
+  15 RPM, thiếu multi-candidate, output-parsing failure — xem `RESULT.md`. Retrieval metrics
+  (context recall/precision) đo được local bằng embedding.
 - **PageIndex** cần `PAGEINDEX_API_KEY`; nếu thiếu, pipeline fallback về hybrid.
-- Corpus giới hạn ở 12 tài liệu của một trường (VU); nội dung có thể đổi theo thời
-  gian — chạy lại Task 1–3 để cập nhật.
+- Corpus giới hạn ở 12 tài liệu của một trường (VU); nội dung có thể đổi theo thời gian.
